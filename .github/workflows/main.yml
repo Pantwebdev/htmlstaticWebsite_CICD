@@ -1,0 +1,23 @@
+name: HTML CI
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check HTML files
+        run: |
+          echo "HTML project checkout successful"
+          ls -la
